@@ -23,8 +23,8 @@ before_script:
 script:
   - |
       cd nitric &&
-      travis-cargo build &&
-      travis-cargo test
+      cargo build --all &&
+      cargo test --all
 
 after_success:
   # upload the documentation from the build with stable (automatically only actually
