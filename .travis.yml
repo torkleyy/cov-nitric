@@ -9,7 +9,7 @@ services:
 
 script:
 #- make test-docker-env
-- git clone https://github.com/torkleyy/nitric.git
+- git clone https://github.com/torkleyy/nitric.git && cd nitric && cargo test --all --all-features && cd ..
 
 cache:
     apt: true
