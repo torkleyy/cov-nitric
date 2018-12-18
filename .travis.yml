@@ -17,10 +17,12 @@ before_script:
   - |
       pip install 'travis-cargo<0.2' --user &&
       export PATH=$HOME/.local/bin:$PATH
+  - git clone https://github.com/torkleyy/nitric.git
 
 # the main build
 script:
   - |
+      cd nitric &&
       travis-cargo build &&
       travis-cargo test
 
